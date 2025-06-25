@@ -1,0 +1,268 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Estilos gerais */
+  body {
+    font-family: Arial, sans-serif;
+    height: 100%;
+    background-color: #1e1e1e;
+    color: rgb(0, 98, 246);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Alinha tudo ao topo */
+    text-align: top left;
+  }
+  
+  /* Tela de Área de Trabalho */
+  .desktop-screen {
+    position: relative;
+    background-image: url('images/yamal\ e\ neymar.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    height: 100vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    color: rgb(255, 253, 253); 
+  }
+  
+  
+  /* Posiciona os ícones no canto superior esquerdo */
+.desktop-icons {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .icon {
+    text-align: center;
+    width: 80px; 
+    height: 100px; 
+    cursor: pointer;
+  }
+  
+  .desktop-icon {
+    width: 50px; 
+    height: 50px; 
+    margin-bottom: 10px; 
+    transition: transform 0.3s ease;
+  }
+  
+  .desktop-icon:hover {
+    transform: scale(1.1); /* Efeito de hover */
+  }
+  
+  .icon p {
+    font-size: 14px;
+    color: #e7e7e7;
+    margin-top: 5px; /* Espaçamento entre ícone e nome */
+  }
+  
+  /* Barra de Tarefas */
+  .barra-tarefas {
+    position: fixed;
+    bottom: 0;
+    left: 0; /* Alinhado à esquerda */
+    width: 100%; /* Barra ocupa toda a largura */
+    height: 30px;
+    background-color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10px; /* Espaçamento da borda esquerda */
+  }
+  
+  .apps {
+    display: flex;
+    gap: 20px;
+    align-items: top left;
+  }
+  
+  .windows-logo {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .app-icon {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  
+  .app-icon:hover {
+    transform: scale(1.1); /* Efeito de hover */
+  }
+
+  /* Tela de boot */
+body.boot-screen {
+  height: 100vh;
+  background-color: #000000; /* fundo preto */
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Container central */
+.loader-container {
+  text-align: center;
+}
+
+/* Logo do Windows */
+.windows-logo2 {
+  width: 200px;
+  height: 200px;
+  margin-bottom: 150px;
+  
+}
+
+/* Loader circular */
+.loader {
+  border: 5px solid rgba(255, 255, 255, 0.2);
+  border-top: 5px solid #ffffff;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin: 0 auto 20px;
+  animation: spin 1s linear infinite;
+}
+
+/* Texto de carregamento */
+.loader-container p {
+  font-size: 16px;
+  opacity: 0.8;
+}
+
+/* Animação de rotação */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Animação de fade-in (para logo) */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: scale(0.9); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+/* Botão oculto para avançar (para fins de navegação futura) */
+.next {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  opacity: 0.3;
+  transition: opacity 0.3s;
+}
+
+.next:hover {
+  opacity: 1;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Tela de Login */
+body.login-screen {
+  height: 100vh;
+  background: linear-gradient(135deg, #0a0a0a, #1e1e1e);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #ffffff;
+}
+
+/* Container de login */
+.login-container {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 40px;
+  border-radius: 12px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+  width: 320px;
+  text-align: center;
+}
+
+/* Título */
+.login-container h1 {
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+/* Formulário */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+/* Rótulos */
+form label {
+  text-align: left;
+  font-size: 14px;
+  color: #cccccc;
+}
+
+/* Campos de entrada */
+input[type="text"],
+input[type="password"] {
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  outline: none;
+  font-size: 14px;
+  background-color: #f0f0f0;
+  color: #000;
+  transition: box-shadow 0.3s;
+}
+
+input:focus {
+  box-shadow: 0 0 0 2px #006af5;
+}
+
+/* Botão */
+button[type="submit"] {
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  background-color: #006af5;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0051c3;
+}
+
+/* Link opcional */
+.next {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 13px;
+  color: #aaa;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.next:hover {
+  color: #ffffff;
+}
